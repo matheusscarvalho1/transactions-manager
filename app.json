@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "projeto",
-    "slug": "projeto",
+    "name": "app-gerenciamento-financeiro",
+    "slug": "Gerenciamento Financeiro",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

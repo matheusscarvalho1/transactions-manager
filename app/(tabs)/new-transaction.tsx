@@ -1,12 +1,12 @@
 import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const Transactions = () => {
+const NewTransactions = () => {
     return (
         <SafeAreaView>
-            <Text>Transações</Text>
+            <Text>Adicionar Transação</Text>
         </SafeAreaView>
     )
 }
 
-export default Transactions;
+export default NewTransactions;

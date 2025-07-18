@@ -1,12 +1,12 @@
 import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const Transactions = () => {
+const SumaryTransactions = () => {
     return (
         <SafeAreaView>
-            <Text>Transações</Text>
+            <Text>Resumo de suas transações</Text>
         </SafeAreaView>
     )
 }
 
-export default Transactions;
+export default SumaryTransactions;
