@@ -1,35 +1,49 @@
-import { Feather, FontAwesome } from "@expo/vector-icons";
+import { Colors } from "@/constants/Colors";
+import { MaterialIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { TouchableOpacity, View } from "react-native";
+import { styles } from "../../assets/styles/styles";
 
 const TabsLayout = () => {
     return (
         <>
             <Tabs
                 screenOptions={{
-                    headerStyle: { backgroundColor: "green"},
-                    headerTintColor : "#FFF",
-                    tabBarActiveTintColor: "green",
-                    tabBarInactiveTintColor: "gray",
+                    headerStyle: { backgroundColor: Colors.primary},
+                    headerTintColor : Colors.primaryContrast,
+                    headerTitleAlign: "center",
+                    tabBarActiveTintColor: Colors.primary,
+                    tabBarInactiveTintColor: Colors.inactive,
+                    tabBarButton: (props: any) => <TouchableOpacity {...props} activeOpacity={0.8} />,
+                    tabBarStyle:{
+                        paddingTop: 5,
+                        backgroundColor: Colors.background
+                    }
                 }}>
             <Tabs.Screen
                 name="index"
                 options={{
                     title: "Transações",
-                    tabBarIcon: ({ color }) => <Feather name="dollar-sign" size={24} color={color} />
+                    tabBarIcon: ({ color }) => <MaterialIcons name="attach-money" size={28} color={color} />
                 }}
             />
             <Tabs.Screen
-                name="new-transaction"
+                name="add-transaction"
                 options={{
                     title: "Adicionar Transação",
-                    tabBarIcon: ({ color }) => <FontAwesome size={29} name="plus-circle" color={color} />
+                    tabBarLabel: "",
+                    tabBarIcon: () => (
+                        <View style={styles.addButton}>
+                            <MaterialIcons name="add" size={28} color={Colors.primaryContrast} />
+                        </View>
+                    )
                 }}
             />
             <Tabs.Screen
                 name="sumary-transations"
                 options={{
                     title: "Resumo",
-                    tabBarIcon: ({ color }) => <FontAwesome size={29} name="pie-chart" color={color} />
+                    tabBarIcon: ({ color }) => <MaterialIcons name="pie-chart" size={28} color={color} />
                 }}
             />
             </Tabs>
