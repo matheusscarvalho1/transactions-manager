@@ -8,7 +8,7 @@ export default function NotFoundScreen() {
         <Text>
           404 Status error - Página não encontrada
         </Text>
-    </SafeAreaView>
+      </SafeAreaView>
     </>
   );
 }
