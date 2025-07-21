@@ -1,4 +1,4 @@
-import { colors } from "@/constants/Colors";
+import { colors } from "@/constants/colors";
 import { StyleSheet } from "react-native";
 
 export const globalStyles = StyleSheet.create ({
@@ -74,6 +74,46 @@ export const globalStyles = StyleSheet.create ({
         borderWidth: 1,
         borderRadius: 8,
         flexGrow: 1
-    }
+        },
+    itemContainer: {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        paddingBottom: 4
+        },
+  textContainer: {
+    display: "flex",
+    flex: 1,
+    flexDirection: "column",
+    marginLeft: 12,
+    paddingVertical: 8
+  },
+  bottomLineContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  line: {
+    backgroundColor: colors.secondaryText,
+    height: 1,
+    opacity: 0.5,
+    marginBottom: 4
+  },
+  primaryText: {
+    fontSize: 16,
+    color: colors.primaryText
+  },
+  secondaryText: {
+    fontSize: 12,
+    color: colors.secondaryText
+  },
+  positiveText: {
+    fontSize: 16,
+    color: colors.positiveText
+  },
+  negativeText: {
+    fontSize: 16,
+    color: colors.negativeText
+  },
 
 })

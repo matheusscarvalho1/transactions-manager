@@ -4,6 +4,7 @@ import CategoryPicker from "@/components/CategoryPicker";
 import CurrencyInput from "@/components/CurrencyInput";
 import DatePicker from "@/components/DatePicker";
 import DescriptionInput from "@/components/DescriptionInput";
+import { categories } from "@/constants/categories";
 import { MoneyContext } from "@/contexts/GlobalState";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useContext, useRef, useState } from "react";
@@ -23,7 +24,7 @@ const AddTransactions = () => {
         description: "",
         value: 0,
         date: new Date(),
-        category: "Renda"
+        category: categories.income.name
     }
 
     const [form, setForm] = useState(initialForm)

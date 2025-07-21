@@ -1,4 +1,4 @@
-import { colors } from "@/constants/Colors";
+import { colors } from "@/constants/colors";
 import GlobalState from "@/contexts/GlobalState";
 import { Stack } from "expo-router";
 import { StatusBar } from "react-native";
