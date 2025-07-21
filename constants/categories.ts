@@ -1,4 +1,4 @@
-import { colors } from "./Colors"
+import { colors } from "./colors";
 
 export const categories = {
   income: {
@@ -31,4 +31,7 @@ export const categories = {
     name: "travel",
     displayName: "Viagens"
   }
-}
+} as const;
+
+// ✅ Aqui está o tipo das chaves válidas
+export type CategoryName = keyof typeof categories;

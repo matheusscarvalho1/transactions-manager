@@ -8,6 +8,7 @@ const GlobalState = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true); // <-- controle de carregamento
 
   useEffect(() => {
+    //AsyncStorage.clear()
     const getAsyncStorage = async () => {
       try {
         const storedTransactions = await AsyncStorage.getItem("transactions");
