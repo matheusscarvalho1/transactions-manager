@@ -1,7 +1,8 @@
+import { globalStyles } from "@/assets/styles/globalStyles";
+import TransactionItem from "@/components/TransactionItem";
 import { MoneyContext } from "@/contexts/GlobalState";
 import { useContext } from "react";
-import { Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { FlatList, Text, View } from "react-native";
 
 
 
@@ -10,20 +11,14 @@ const Transactions = () => {
     const [transactions] = useContext(MoneyContext)
 
     return (
-        <SafeAreaView>
-            {/* {contas.map((item) => 
-            <View key={item?.id} style={globalStyles.container}>
-                <View style={globalStyles.container2}>
-                    <Text>{item.data}</Text>
-                    <Text>{item.gasto}</Text>
-                </View>
-                <Text>{item.valor}</Text>
-            </View>
-            )} */}
-            <Text>
-                {transactions[0]?.description}
-            </Text>
-        </SafeAreaView>
+        <View style={globalStyles.screenContainer}>
+            <FlatList
+            data={transactions}
+            renderItem={({ item }) => <TransactionItem {...item} />}
+            ListEmptyComponent={<Text style={globalStyles.secondaryText}>Ainda não há nenhum item adicionado.</Text>}
+            style={globalStyles.content}
+            />
+        </View>
     )
 }
 
