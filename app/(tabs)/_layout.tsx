@@ -1,23 +1,24 @@
-import { Colors } from "@/constants/Colors";
+import { colors } from "@/constants/Colors";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { TouchableOpacity, View } from "react-native";
-import { styles } from "../../assets/styles/styles";
+import { globalStyles } from "../../assets/styles/globalStyles";
 
 const TabsLayout = () => {
     return (
         <>
             <Tabs
                 screenOptions={{
-                    headerStyle: { backgroundColor: Colors.primary},
-                    headerTintColor : Colors.primaryContrast,
+                    tabBarHideOnKeyboard: true,
+                    headerStyle: { backgroundColor: colors.primary},
+                    headerTintColor : colors.primaryContrast,
                     headerTitleAlign: "center",
-                    tabBarActiveTintColor: Colors.primary,
-                    tabBarInactiveTintColor: Colors.inactive,
+                    tabBarActiveTintColor: colors.primary,
+                    tabBarInactiveTintColor: colors.inactive,
                     tabBarButton: (props: any) => <TouchableOpacity {...props} activeOpacity={0.8} />,
                     tabBarStyle:{
                         paddingTop: 5,
-                        backgroundColor: Colors.background
+                        backgroundColor: colors.background
                     }
                 }}>
             <Tabs.Screen
@@ -33,8 +34,8 @@ const TabsLayout = () => {
                     title: "Adicionar Transação",
                     tabBarLabel: "",
                     tabBarIcon: () => (
-                        <View style={styles.addButton}>
-                            <MaterialIcons name="add" size={28} color={Colors.primaryContrast} />
+                        <View style={globalStyles.addButton}>
+                            <MaterialIcons name="add" size={28} color={colors.primaryContrast} />
                         </View>
                     )
                 }}

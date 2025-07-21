@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { styles } from "../../assets/styles/styles";
+import { globalStyles } from "../../assets/styles/globalStyles";
 
 
 interface Conta {
@@ -47,8 +47,8 @@ const contas: Conta[] = [
     return (
         <SafeAreaView>
             {contas.map((item) => 
-            <View key={item?.id} style={styles.container}>
-                <View style={styles.container2}>
+            <View key={item?.id} style={globalStyles.container}>
+                <View style={globalStyles.container2}>
                     <Text>{item.data}</Text>
                     <Text>{item.gasto}</Text>
                 </View>
