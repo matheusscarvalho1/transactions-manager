@@ -11,7 +11,7 @@ interface Form {
 interface CurrencyInputProps {
   form: Form;
   setForm: React.Dispatch<React.SetStateAction<Form>>;
-  valueInputRef?: React.RefObject<TextInput | null>;
+  valueInputRef: React.RefObject<TextInput | null>;
 }
 
 const DescriptionInput = ({ form, setForm, valueInputRef }: CurrencyInputProps) => {
