@@ -127,11 +127,11 @@ const addingTransaction = async () => {
 * Para melhor entendimento: [Assista ao vídeo com as funcionalidades](https://youtube.com/shorts/bzRidm1hqDU)
 
 * ### Telas
-<img src="https://github.com/user-attachments/assets/0bc732f9-6f36-4173-9754-1d831e860496" width="275" />
+<img src="https://github.com/user-attachments/assets/0bc732f9-6f36-4173-9754-1d831e860496" width="250" />
 
-<img src="https://github.com/user-attachments/assets/b479e602-5185-48d6-8ef0-2f49127f40a3" width="275" />
+<img src="https://github.com/user-attachments/assets/b479e602-5185-48d6-8ef0-2f49127f40a3" width="250" />
 
-<img src="https://github.com/user-attachments/assets/c450d4be-c831-43ed-84d5-534d937e2091" width="275" />
+<img src="https://github.com/user-attachments/assets/c450d4be-c831-43ed-84d5-534d937e2091" width="250" />
 
 
 
