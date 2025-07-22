@@ -20,16 +20,19 @@ const TransactionItem = ({ category, date, description, value }: TransactionItem
     : globalStyles.negativeText
 
   return (
-    <View style={globalStyles.itemContainer}>
-      <CategoryItem category={category} />
-      <View style={globalStyles.textContainer}>
-        <Text style={globalStyles.secondaryText}>{new Date(date).toLocaleDateString("pt-BR")}</Text>
-        <View style={globalStyles.bottomLineContainer}>
-          <Text style={globalStyles.primaryText}>{description}</Text>
-          <Text style={valueStyle}>{value.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}</Text>
+    <>
+      <View style={globalStyles.itemContainer}>
+        <CategoryItem category={category} />
+        <View style={globalStyles.textContainer}>
+          <Text style={globalStyles.secondaryText}>{new Date(date).toLocaleDateString("pt-BR")}</Text>
+          <View style={globalStyles.bottomLineContainer}>
+            <Text style={globalStyles.primaryText}>{description}</Text>
+            <Text style={valueStyle}>{value.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}</Text>
+          </View>
         </View>
       </View>
-    </View>
+      <View style={globalStyles.line} />
+    </>
   )
 }
 
