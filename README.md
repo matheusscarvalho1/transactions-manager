@@ -14,7 +14,6 @@ Aplicativo mobile construído com **Expo**, **React Native** e **TypeScript** pa
   - Categoria (ex: entrada, saída)
 - 📊 Tela de **resumo financeiro** (estrutura preparada)
 - 💾 Persistência local com `AsyncStorage`
-- Navegação moderna com `expo-router` (file-based routing)
 - Layout adaptado com `KeyboardAvoidingView`, `TouchableWithoutFeedback`, `ScrollView` e outros recursos de UX
 
 ---
@@ -124,17 +123,23 @@ const addingTransaction = async () => {
 
 ---
 
-## 📚 Aprenda Mais
+## 📚 Resultado
 
-* [Expo Documentation](https://docs.expo.dev/)
-* [React Native Docs](https://reactnative.dev/)
-* [expo-router](https://expo.github.io/router/)
-* [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+* Para melhor entendimento: [Assista ao vídeo com as funcionalidades](https://youtube.com/shorts/bzRidm1hqDU)
+
+* ### Telas
+<img src="https://github.com/user-attachments/assets/0bc732f9-6f36-4173-9754-1d831e860496" width="300" />
+
+<img src="https://github.com/user-attachments/assets/b479e602-5185-48d6-8ef0-2f49127f40a3" width="300" />
+
+<img src="https://github.com/user-attachments/assets/c450d4be-c831-43ed-84d5-534d937e2091" width="300" />
+
+
 
 ---
 
 ## 👨‍💻 Autor
 
 **Matheus Carvalho**
-📧 contato: [seuemail@exemplo.com](mailto:seuemail@exemplo.com)
-🔗 [LinkedIn](https://linkedin.com/in/seu-usuario) | [GitHub](https://github.com/seu-usuario)
+📧 contato: [matheusdocarvalho@gmail.com](mailto:matheusdocarvalho@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/matheusscarvalho) | [GitHub](https://github.com/matheusscarvalho1)
