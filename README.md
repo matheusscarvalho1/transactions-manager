@@ -1,50 +1,140 @@
-# Welcome to your Expo app 👋
+# 💸 Money - Gerenciamento Financeiro
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile construído com **Expo**, **React Native** e **TypeScript** para ajudar usuários a **gerenciarem suas finanças pessoais**. Permite registrar receitas e despesas, visualizar um histórico de transações e manter os dados localmente mesmo após fechar o app.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Funcionalidades
 
-   ```bash
-   npm install
-   ```
+- 🧾 Listagem de transações (com remoção por swipe/toque)
+- ➕ Cadastro de transações com:
+  - Descrição
+  - Valor com formatação de moeda
+  - Data customizável
+  - Categoria (ex: entrada, saída)
+- 📊 Tela de **resumo financeiro** (estrutura preparada)
+- 💾 Persistência local com `AsyncStorage`
+- Navegação moderna com `expo-router` (file-based routing)
+- Layout adaptado com `KeyboardAvoidingView`, `TouchableWithoutFeedback`, `ScrollView` e outros recursos de UX
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🧠 Tecnologias e Conceitos
 
-In the output, you'll find options to open the app in a
+| Área | Tecnologias Utilizadas |
+|------|-------------------------|
+| Mobile | React Native + Expo SDK 53 |
+| Navegação | `expo-router`, `@react-navigation/native`, `@react-navigation/bottom-tabs` |
+| Interface | `@expo/vector-icons`, `expo-blur`, `expo-image`, `expo-status-bar` |
+| Armazenamento | `@react-native-async-storage/async-storage` |
+| Inputs | `react-native-datetimepicker`, `@react-native-picker/picker` |
+| Tipagem | TypeScript |
+| Estado global | React Context (`MoneyContext`) |
+| Estilo | `StyleSheet` e estilos reutilizáveis (`globalStyles`) |
+| Lint | ESLint com `eslint-config-expo` |
+| Organização | Componentização e separação de responsabilidades por pasta |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📦 Instalação
 
-## Get a fresh project
-
-When you're ready, run:
+1. Clone o repositório:
 
 ```bash
-npm run reset-project
+git clone https://github.com/seu-usuario/app-gerenciamento-financeiro.git
+cd app-gerenciamento-financeiro
+````
+
+2. Instale as dependências:
+
+```bash
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3. Inicie o projeto:
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Você poderá rodar o app em:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* Dispositivo físico com **Expo Go**
+* Emulador Android / iOS
+* Navegador (modo Web)
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 🛠 Scripts
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npm start              # Inicia o app com Expo
+npm run android        # Abre no emulador Android
+npm run ios            # Abre no simulador iOS (Mac)
+npm run web            # Executa o app no navegador
+npm run lint           # Executa o ESLint para verificar problemas de código
+npm run reset-project  # Script que reseta a pasta app
+```
+
+---
+
+## 🧾 Estrutura do Projeto
+
+```bash
+.
+├── app/
+│   ├── (tabs)/                  # Navegação por abas
+│   ├── index.tsx                # Tela principal - lista de transações
+│   ├── add-transaction.tsx      # Tela para adicionar nova transação
+│   └── summary-transations.tsx  # Tela de resumo financeiro
+├── assets/                      # Ícones e imagens
+├── components/                  # Componentes reutilizáveis (Input, Botão, etc.)
+├── constants/                   # Cores, categorias, etc.
+├── contexts/                    # Estado global (MoneyContext)
+├── scripts/                     # Scripts utilitários
+├── styles/                      # Estilos globais
+└── ...
+```
+
+---
+
+## 🔄 Cadastro de Transações
+
+A tela de adição (`add-transaction.tsx`) utiliza um formulário controlado com os campos:
+
+* `description: string`
+* `value: number`
+* `date: Date`
+* `category: string`
+
+As transações são salvas no contexto global e também persistidas no `AsyncStorage`.
+
+```tsx
+const addingTransaction = async () => {
+  const newTransaction = { id: transactions.length + 1, ...form };
+  const updateTransactions = [...transactions, newTransaction];
+
+  setTransactions(updateTransactions);
+  setForm(initialForm);
+  await AsyncStorage.setItem("transactions", JSON.stringify(updateTransactions));
+
+  Alert.alert("Transação adicionada com sucesso!");
+};
+```
+
+---
+
+## 📚 Aprenda Mais
+
+* [Expo Documentation](https://docs.expo.dev/)
+* [React Native Docs](https://reactnative.dev/)
+* [expo-router](https://expo.github.io/router/)
+* [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+
+---
+
+## 👨‍💻 Autor
+
+**Matheus Carvalho**
+📧 contato: [seuemail@exemplo.com](mailto:seuemail@exemplo.com)
+🔗 [LinkedIn](https://linkedin.com/in/seu-usuario) | [GitHub](https://github.com/seu-usuario)
