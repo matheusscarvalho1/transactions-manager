@@ -23,6 +23,7 @@ const CategoryPicker = ({ form, setForm }: CategoryPickerProps) => {
                 <Picker
                     selectedValue={form.category}
                     onValueChange={(itemValue) => setForm({ ...form, category: itemValue })}
+                    style={globalStyles.pickerInput}
                 >
                     <Picker.Item 
                         label={categories.income.displayName}

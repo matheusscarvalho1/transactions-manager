@@ -17,7 +17,9 @@ export const globalStyles = StyleSheet.create ({
         borderColor: colors.secondaryText,
         borderWidth: 1,
         borderRadius: 8,
-        flexGrow: 1
+        flexGrow: 1,
+        backgroundColor: colors.primaryContrast,
+        color: colors.blackText
     },
     inputLabel: {
         fontSize: 16,
@@ -67,14 +69,18 @@ export const globalStyles = StyleSheet.create ({
         marginTop: 10 
     },
     picker: {
-        display: "flex",
-        justifyContent: "center",
-        height: 44,
-        borderColor: colors.secondaryText,
-        borderWidth: 1,
-        borderRadius: 8,
-        flexGrow: 1
-        },
+      height: 44,
+      borderColor: colors.secondaryText,
+      borderWidth: 1,
+      borderRadius: 8,
+      justifyContent: "center",
+      paddingLeft: 10,
+      width: "100%",
+      backgroundColor: colors.primaryContrast,
+  },
+  pickerInput: {
+    color: colors.blackText,
+  },
     itemContainer: {
         display: "flex",
         flexDirection: "row",

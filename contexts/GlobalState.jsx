@@ -5,8 +5,7 @@ export const MoneyContext = createContext();
 
 const GlobalState = ({ children }) => {
   const [transactions, setTransactions] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); // <-- controle de carregamento
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     //AsyncStorage.clear()
     const getAsyncStorage = async () => {

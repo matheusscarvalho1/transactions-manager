@@ -11,6 +11,7 @@ export const colors = {
     primaryText: "#666666",
     secondaryText: "#B1B1B1",
     positiveText: "#37BF81",
-    negativeText: "#DA5567"
+    negativeText: "#DA5567",
+    blackText: "#000000"
 
 };
