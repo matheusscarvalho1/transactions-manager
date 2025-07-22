@@ -41,7 +41,7 @@ const TabsLayout = () => {
                 }}
             />
             <Tabs.Screen
-                name="sumary-transations"
+                name="summary-transations"
                 options={{
                     title: "Resumo",
                     tabBarIcon: ({ color }) => <MaterialIcons name="pie-chart" size={28} color={color} />
