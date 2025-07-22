@@ -115,5 +115,16 @@ export const globalStyles = StyleSheet.create ({
     fontSize: 16,
     color: colors.negativeText
   },
+  balance: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  balanceText: {
+    fontSize: 18,
+    color: colors.primaryText,
+    fontWeight: 800
+  }
+
 
 })
