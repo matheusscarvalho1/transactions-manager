@@ -8,10 +8,27 @@ Embora já trabalhe há algum tempo com **React para aplicações web**, essa é
 
 Durante o desenvolvimento, pude aplicar conhecimentos já consolidados, como o uso de componentes reutilizáveis, contexto global e tipagem com TypeScript, ao mesmo tempo em que explorei recursos exclusivos do mobile, como:
 
-- Gerenciamento de teclado (`KeyboardAvoidingView`, `TouchableWithoutFeedback`)
-- Manipulação de datas e seletores nativos
-- Estilização com `StyleSheet`
-- Persistência de dados com `AsyncStorage`
+- Componentes básicos e específicos do React Native como 'View', 'Text', 'TextInput', 'TouchableOpacity', 'ScrollView', 'FlatList', 'SectionList', entre outros, querendo ou não mudam algumas coisas, são detalhes diferentes, porém é interessante saber.
+
+- Gerenciamento de teclado para evitar sobreposição dos inputs, com componentes como KeyboardAvoidingView e tratamento de toques fora do teclado com TouchableWithoutFeedback
+
+- Manipulação de datas e seletores nativos usando bibliotecas como @react-native-community/datetimepicker
+
+- Estilização eficiente com o objeto StyleSheet do React Native para criar estilos otimizados e reutilizáveis
+
+- Persistência de dados local usando AsyncStorage para salvar dados entre sessões
+
+- Animações e gestos usando Animated e react-native-gesture-handler para interações como swipe para excluir itens
+
+- Formatação e validação de entradas, como máscara para valores monetários e controle de teclado numérico
+
+- Navegação entre telas com bibliotecas como react-navigation (embora não mostrado aqui, normalmente usada em apps mobile)
+
+- Uso de hooks do React e TypeScript para garantir tipagem segura e melhor manutenção do código
+
+- Adaptação de UI para diferentes plataformas (iOS/Android), como ajustes no seletor de data (display inline no iOS, default no Android)
+
+- Controle de estado local e global para gerenciamento eficiente dos dados e reatividade da interface
 
 Com essa experiência, agora posso atuar tanto no desenvolvimento web quanto mobile, pois o conhecimento em React é amplamente reaproveitável para React Native, ampliando minha capacidade de atender a diferentes demandas.
 
