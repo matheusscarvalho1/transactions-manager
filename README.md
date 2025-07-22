@@ -2,6 +2,19 @@
 
 Aplicativo mobile construído com **Expo**, **React Native** e **TypeScript** para ajudar usuários a **gerenciarem suas finanças pessoais**. Permite registrar receitas e despesas, visualizar um histórico de transações e manter os dados localmente mesmo após fechar o app.
 
+Esse projeto foi desenvolvido como parte da minha transição de **desenvolvedor web com React** para o mundo do **desenvolvimento mobile com React Native**.
+
+Embora já trabalhe há algum tempo com **React para aplicações web**, essa é uma das minhas **primeiras experiências com React Native**. A proposta deste app foi justamente me familiarizar com os **componentes nativos do ambiente mobile** e entender as **diferenças práticas entre o React tradicional (web) e o React Native**.
+
+Durante o desenvolvimento, pude aplicar conhecimentos já consolidados, como o uso de componentes reutilizáveis, contexto global e tipagem com TypeScript, ao mesmo tempo em que explorei recursos exclusivos do mobile, como:
+
+- Gerenciamento de teclado (`KeyboardAvoidingView`, `TouchableWithoutFeedback`)
+- Manipulação de datas e seletores nativos
+- Estilização com `StyleSheet`
+- Persistência de dados com `AsyncStorage`
+
+Com essa experiência, agora posso atuar tanto no desenvolvimento web quanto mobile, pois o conhecimento em React é amplamente reaproveitável para React Native, ampliando minha capacidade de atender a diferentes demandas.
+
 ---
 
 ## 📱 Funcionalidades
