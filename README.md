@@ -11,7 +11,7 @@ Aplicativo mobile construído com **Expo**, **React Native** e **TypeScript** pa
   - Descrição
   - Valor com formatação de moeda
   - Data customizável
-  - Categoria (ex: entrada, saída)
+  - Categoria (Origem dos gastos)
 - 📊 Tela de **resumo financeiro** (estrutura preparada)
 - 💾 Persistência local com `AsyncStorage`
 - Layout adaptado com `KeyboardAvoidingView`, `TouchableWithoutFeedback`, `ScrollView` e outros recursos de UX
@@ -67,12 +67,7 @@ Você poderá rodar o app em:
 ## 🛠 Scripts
 
 ```bash
-npm start              # Inicia o app com Expo
-npm run android        # Abre no emulador Android
-npm run ios            # Abre no simulador iOS (Mac)
-npm run web            # Executa o app no navegador
-npm run lint           # Executa o ESLint para verificar problemas de código
-npm run reset-project  # Script que reseta a pasta app
+npx expo start          # Inicia o app com Expo
 ```
 
 ---
@@ -82,17 +77,21 @@ npm run reset-project  # Script que reseta a pasta app
 ```bash
 .
 ├── app/
-│   ├── (tabs)/                  # Navegação por abas
-│   ├── index.tsx                # Tela principal - lista de transações
-│   ├── add-transaction.tsx      # Tela para adicionar nova transação
-│   └── summary-transations.tsx  # Tela de resumo financeiro
-├── assets/                      # Ícones e imagens
-├── components/                  # Componentes reutilizáveis (Input, Botão, etc.)
-├── constants/                   # Cores, categorias, etc.
-├── contexts/                    # Estado global (MoneyContext)
-├── scripts/                     # Scripts utilitários
-├── styles/                      # Estilos globais
+│   ├── (tabs)/                 
+│   │   ├── _layout.tsx              # Define a navegação por abas
+│   │   ├── index.tsx                # Tela principal - lista de transações
+│   │   ├── add-transaction.tsx      # Tela para adicionar nova transação
+│   │   └── summary-transations.tsx  # Tela de resumo financeiro
+│   ├── _layout.tsx                 # Define a navegação geral do app
+│   └── not-found.tsx              # Página de rota não encontrada (404)
+├── assets/                         # Ícones e imagens
+├── components/                     # Componentes reutilizáveis (Input, Botão, etc.)
+├── constants/                      # Cores, categorias, etc.
+├── contexts/                       # Estado global (MoneyContext)
+├── scripts/                        # Scripts utilitários
+├── styles/                         # Estilos globais
 └── ...
+
 ```
 
 ---
@@ -128,11 +127,11 @@ const addingTransaction = async () => {
 * Para melhor entendimento: [Assista ao vídeo com as funcionalidades](https://youtube.com/shorts/bzRidm1hqDU)
 
 * ### Telas
-<img src="https://github.com/user-attachments/assets/0bc732f9-6f36-4173-9754-1d831e860496" width="300" />
+<img src="https://github.com/user-attachments/assets/0bc732f9-6f36-4173-9754-1d831e860496" width="275" />
 
-<img src="https://github.com/user-attachments/assets/b479e602-5185-48d6-8ef0-2f49127f40a3" width="300" />
+<img src="https://github.com/user-attachments/assets/b479e602-5185-48d6-8ef0-2f49127f40a3" width="275" />
 
-<img src="https://github.com/user-attachments/assets/c450d4be-c831-43ed-84d5-534d937e2091" width="300" />
+<img src="https://github.com/user-attachments/assets/c450d4be-c831-43ed-84d5-534d937e2091" width="275" />
 
 
 
